@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>给王小昉的一封会动的情书</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <!-- 首页：标题、星空互动和打开情书按钮 -->
+    <section class="hero" aria-labelledby="page-title">
+      <div class="sky-layer" aria-hidden="true">
+        <span class="floating-heart heart-one"></span>
+        <span class="floating-heart heart-two"></span>
+        <span class="floating-heart heart-three"></span>
+        <span class="floating-heart heart-four"></span>
+      </div>
+
+      <div class="content">
+        <p class="small-label">给王小昉的一封会动的情书</p>
+        <h1 id="page-title">王小昉，请查收一份来自俊霖的小宇宙</h1>
+        <p class="intro">
+          这里藏着几颗星星，也藏着俊霖认真放好的喜欢。
+        </p>
+
+        <div class="star-field" id="starField" aria-label="可点击的情话星星"></div>
+
+        <button class="letter-button" id="openLetter" type="button">
+          打开情书
+        </button>
+      </div>
+    </section>
+
+    <!-- 底部彩蛋：输入正确名字后显示专属文案 -->
+    <section class="egg-section" aria-labelledby="egg-title">
+      <h2 id="egg-title">隐藏彩蛋</h2>
+      <label for="nameInput">输入你的名字解锁彩蛋</label>
+      <div class="egg-form">
+        <input id="nameInput" type="text" autocomplete="off" placeholder="输入你的名字解锁彩蛋">
+        <button id="unlockEgg" type="button">解锁</button>
+      </div>
+      <p class="egg-result" id="eggResult" aria-live="polite"></p>
+    </section>
+
+    <p class="closing-line">
+      这个网页不会很复杂，<br>
+      但我做它的时候，想的是你看到它时会不会笑一下。
+    </p>
+  </main>
+
+  <div class="toast" id="loveToast" role="status" aria-live="polite"></div>
+
+  <!-- 情书弹窗 -->
+  <div class="modal" id="letterModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="letter-card" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+      <button class="close-button" type="button" data-close-modal aria-label="关闭情书">×</button>
+      <p class="letter-kicker">一封写给你的信</p>
+      <h2 id="letterTitle">骚昉：</h2>
+      <div class="letter-text">
+        <p>遇见你以后，我开始觉得很多普通的日子都有了特别的意义。</p>
+        <p>我会有自己的工作、项目和压力，也可能会有暂时的距离，</p>
+        <p>但我想认真告诉你：我会努力把生活过好，也会努力把你放在很重要的位置。</p>
+        <p>我想和你一起吃饭、散步、聊天、拍照，也想在未来很多个平凡的日子里继续喜欢你。</p>
+        <p>你不用成为多完美的人，因为在我这里，你已经很特别。</p>
+        <p>王小昉，我喜欢你，也想一直认真地偏爱你。</p>
+        <p class="signature">—— 何俊霖</p>
+      </div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
